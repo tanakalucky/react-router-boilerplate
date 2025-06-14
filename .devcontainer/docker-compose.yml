@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/app
+      - ~/.config/zed:/app/.zed/
+    tty: true
+    image: react-router-boilerplate-app
+    container_name: react-router-boilerplate-app
+    environment:
+      TZ: "Asia/Tokyo"
